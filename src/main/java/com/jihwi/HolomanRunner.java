@@ -12,8 +12,14 @@ public class HolomanRunner implements ApplicationRunner {
     @Autowired
     Holoman holoman;
 
+    @Autowired
+    UrlProperties urlProperties;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(holoman);
+        System.out.println(urlProperties.getImage());
+        System.out.println(urlProperties.getWeb());
+        System.out.println(urlProperties.getConnectionTimeout());
     }
 }
