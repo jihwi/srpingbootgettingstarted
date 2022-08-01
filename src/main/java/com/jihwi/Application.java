@@ -1,5 +1,7 @@
 package com.jihwi;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -55,20 +57,20 @@ public class Application {
 //        tomcat.getServer().await();
 //    }
 
-    public static void main(String[] args) {
-//        SpringApplication.run(Application.class, args);
-        //builder 패턴
-        new SpringApplicationBuilder()
-                .web(WebApplicationType.NONE)
-                .sources(Application.class)
-                .listeners(new SampleListner())
-                .run(args);
-    }
-
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello, spring";
-    }
+//    public static void main(String[] args) {
+////        SpringApplication.run(Application.class, args);
+//        //builder 패턴
+//        new SpringApplicationBuilder()
+//                .web(WebApplicationType.NONE)
+//                .sources(Application.class)
+//                .listeners(new SampleListner())
+//                .run(args);
+//    }
+//
+//    @GetMapping("/hello")
+//    public String hello(){
+//        return "hello, spring";
+//    }
 
     //https설정이후 http로도 받고 싶으면 다른 포트에 conector하나 더 만들기
 //    @Bean
@@ -83,4 +85,9 @@ public class Application {
 //        connector.setPort(8090);
 //        return connector;
 //    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+
+    }
 }
