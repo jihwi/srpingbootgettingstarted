@@ -24,6 +24,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!--다른 웹서버 서블릿 컨텍스트 이용시 기존 내장 tomcat제외하고 하고자 하는 웹서버 dependency 추가하면됨-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
         <!--외부 프로젝트 import (외부 프로젝트의 빈 사용 가능해짐)-->
         <dependency>
