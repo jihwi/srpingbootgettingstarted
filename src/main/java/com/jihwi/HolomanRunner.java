@@ -1,6 +1,9 @@
 package com.jihwi;
 
 import com.example.Holoman;
+import com.example.HolomanProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -14,6 +17,9 @@ public class HolomanRunner implements ApplicationRunner {
     Holoman holoman;
 
     @Autowired
+    HolomanProperties properties;
+
+    @Autowired
     UrlProperties urlProperties;
 
     @Autowired
@@ -22,15 +28,23 @@ public class HolomanRunner implements ApplicationRunner {
     @Value("${spring.datasource.url}")
     String datasourceUrl;
 
+    private Logger logger = LoggerFactory.getLogger(HolomanRunner.class);
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("===========");
-        System.out.println(hello);
-        System.out.println("===========");
-
-        System.out.println(urlProperties.getWeb());
-        System.out.println(urlProperties.getImage());
-        System.out.println(datasourceUrl);
+        logger.debug("!!!!!!!!!!!!!!!!!!!!!!!");
+        logger.debug(hello);
+        logger.debug(urlProperties.getImage());
+        logger.debug(holoman.toString());
+        logger.debug(properties.getName());
+//
+//        System.out.println("===========");
+//        System.out.println(hello);
+//        System.out.println("===========");
+//
+//        System.out.println(urlProperties.getWeb());
+//        System.out.println(urlProperties.getImage());
+//        System.out.println(datasourceUrl);
     }
 
 //    @Override
