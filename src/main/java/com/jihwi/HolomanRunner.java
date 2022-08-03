@@ -25,8 +25,8 @@ public class HolomanRunner implements ApplicationRunner {
     @Autowired
     String hello;
 
-    @Value("${spring.datasource.url}")
-    String datasourceUrl;
+    @Value("${url.prddb}")
+    String dburl;
 
     private Logger logger = LoggerFactory.getLogger(HolomanRunner.class);
 
@@ -37,6 +37,7 @@ public class HolomanRunner implements ApplicationRunner {
         logger.debug(urlProperties.getImage());
         logger.debug(holoman.toString());
         logger.debug(properties.getName());
+        logger.debug(dburl);
 //
 //        System.out.println("===========");
 //        System.out.println(hello);

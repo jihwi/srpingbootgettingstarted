@@ -1,16 +1,15 @@
-package com.jihwi.config;
-
+package com.jihwi.config.profile;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("test")
-public class TestConfiguration {
+@Profile("prod")
+public class BaseConfiguration {
 
     @Bean
     public String hello(){
-        return "hello, test";
+       return "hello, prod";
     }
 }
