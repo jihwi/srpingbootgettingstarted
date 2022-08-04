@@ -1,0 +1,1 @@
+ALTER TABLE spring.account ADD active BOOLEAN;
