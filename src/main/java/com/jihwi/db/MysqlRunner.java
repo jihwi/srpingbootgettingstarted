@@ -29,7 +29,7 @@ public class MysqlRunner implements ApplicationRunner {
             logger.debug(connection.getMetaData().getUserName());
 
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE SPRING(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (ID))";
+            String sql = "CREATE TABLE srping.account(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (ID))";
             statement.executeUpdate(sql);
         }catch (Exception e){
             e.printStackTrace();

@@ -11,7 +11,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.convert.DurationUnit;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class HolomanRunner implements ApplicationRunner {
 
     @Autowired
