@@ -13,7 +13,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/welcome").permitAll()
+                .antMatchers("/", "/welcome", "/hello", "/hi").permitAll()
                 .anyRequest().authenticated()
                 .and()
              //accept가 html인 경우
