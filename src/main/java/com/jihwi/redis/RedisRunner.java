@@ -5,6 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
@@ -20,12 +21,13 @@ public class RedisRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        ValueOperations<String, String> value = redisTemplate.opsForValue();
-        value.set("keesun", "whiteship");
-        value.set("springboot", "2.0");
-        value.set("hello", "world");
+//        ValueOperations<String, String> value = redisTemplate.opsForValue();
+//        value.set("keesun", "whiteship");
+//        value.set("springboot", "2.0");
+//        value.set("hello", "world");
 
         Redis redis = new Redis();
+        redis.setId("1");
         redis.setName("jihwi");
         redis.setEmail("jihwi@cj.net");
 
